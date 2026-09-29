@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OSINT Dash</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div><span class="eyebrow">AUTHORIZED RESEARCH ONLY</span><h1>OSINT<span>Dash</span></h1></div>
+    <div class="status"><i></i> API ONLINE</div>
+  </header>
+  <main class="shell">
+    <section class="hero"><div><p class="eyebrow">RECONNAISSANCE WORKSPACE</p><h2>Turn a target into <em>actionable context.</em></h2><p class="muted">Track targets and run lightweight, passive checks from one focused workspace.</p></div><div class="hero-mark">◒</div></section>
+    <section class="grid">
+      <div class="panel create-panel"><div class="panel-title"><h3>New target</h3><span>01</span></div>
+        <form id="target-form"><label>Target identifier<input id="name" required placeholder="example.com or Acme Corp"></label><label>Type<select id="type"><option value="website">Website</option><option value="business">Business</option><option value="name">Person / name</option></select></label><label>Research notes<textarea id="notes" placeholder="Scope, program, or context..."></textarea></label><button type="submit">ADD TO WORKSPACE <b>→</b></button></form>
+        <p class="legal">Only test assets you own or have explicit permission to assess. This app performs passive checks and does not bypass access controls.</p>
+      </div>
+      <div class="panel targets-panel"><div class="panel-title"><h3>Targets</h3><span id="target-count">0 ACTIVE</span></div><div id="targets" class="target-list"><div class="empty">No targets yet.<br><small>Add one to begin your workspace.</small></div></div></div>
+    </section>
+    <section class="panel findings-panel"><div class="panel-title"><h3 id="findings-title">Findings</h3><span id="scan-state">SELECT A TARGET</span></div><div id="findings" class="findings"><div class="empty">Select a target and run a passive scan to see results here.</div></div></section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
