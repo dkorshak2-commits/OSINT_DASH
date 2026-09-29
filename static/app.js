@@ -11,7 +11,7 @@ function renderTargets(targets) {
   $('#target-count').textContent = `${targets.length} ACTIVE`;
   $('#targets').innerHTML = targets.length ? targets.map(t => `
     <article class="target ${selected?.id === t.id ? 'selected' : ''}" data-id="${t.id}">
-      <div class="target-icon">${t.target_type === 'website' ? '◎' : t.target_type === 'business' ? '▦' : '◇'}</div>
+      <div class="target-icon">${t.target_type === 'website' ? '◎' : t.target_type === 'business' ? '□' : '◇'}</div>
       <div class="target-copy"><strong>${escapeHtml(t.name)}</strong><small>${t.target_type.toUpperCase()} · ${new Date(t.created_at).toLocaleDateString()}</small></div>
       <button class="scan" title="Run passive scan">SCAN ↗</button><button class="delete" title="Delete target">×</button>
     </article>`).join('') : '<div class="empty">No targets yet.<br><small>Add one to begin your workspace.</small></div>';
